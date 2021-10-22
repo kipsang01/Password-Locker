@@ -37,7 +37,13 @@ def main():
         characters = string.ascii_letters + string.punctuation  + string.digits
         password =  "".join(choice(characters) for x in range(randint(8, 16)))
         return password  
-     
+    
+    
+    #function for main actions
+    def main_actions():    
+        show_options()
+        option = input()
+    
 if __name__ == '__main__':
     
     main()
