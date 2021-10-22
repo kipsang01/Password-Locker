@@ -1,3 +1,5 @@
+from credentials_class import Credential
+from user_class import User
 import string
 from random import *
 
@@ -66,6 +68,16 @@ def main():
                     2. Use system generated password\n')
                 
                 password_choice = input(' Option: ')
+                
+            new_user.create_new_credential(acc_name, acc_username, acc_password)
+            
+            main_actions()
+            
+        # viewing created credentials  
+        elif option == '2':
+            new_user.see_credentials()
+            
+            main_actions()
     
 if __name__ == '__main__':
     
