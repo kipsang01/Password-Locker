@@ -15,9 +15,13 @@ class User:
        #return credentials 
     def see_credentials(self):
         i = 0
-        for credential in self.credentials:
-            print( str(i) +'  Account: '+credential.acc_name +' Username: '+ credential.acc_username +' Password: '+ credential.acc_password)
-            i +=1
+        if len(self.credentials) >0:
+            for credential in self.credentials:
+                print( str(i) +'  Account: '+credential.acc_name +' Username: '+ credential.acc_username +' Password: '+ credential.acc_password)
+                i +=1
+                
+        else:
+            print('You do not have any credentials yet')
             
     #Delete credential
     def delete_credential(self,index):

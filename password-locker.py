@@ -87,15 +87,18 @@ def main():
            # deleting a credential
         elif option == '3':
             print('-------------------------------------------------------')
-            print('Select the credential you want to delete:')
-            new_user.see_credentials()
             length = len(new_user.credentials)
-            index = int(input('Option: '))
-            while index not in range(0,length) :
-                print('invalid selection. Try again')
-            new_user.delete_credential(index)
-            
-            main_actions()
+            if len == 0:
+                print("There is no credentials to delete")
+            else:
+                new_user.see_credentials()
+                print('Select the credential you want to delete:')
+                index = int(input('Option: '))
+                while index not in range(0,length) :
+                    print('invalid selection. Try again')
+                new_user.delete_credential(index)
+                
+                main_actions()
             
         elif option == '4':
             main()
@@ -124,7 +127,7 @@ def main():
     
     print('-------------------------------------------------------')  
     print('Welcome to Password Locker\n Please choose to:\n 1: Create Account\n 2: Login\n 3: Exit')
-    print('-------------------------------------------------------')
+   
     user_option =  input()
     
     #create account
