@@ -106,6 +106,20 @@ def main():
     print('Welcome to Password Locker\n Please choose to:\n 1: Create Account\n 2: Login\n 3: Exit')
     user_option =  input()
     
+    if user_option == '1':
+        
+        username = input('Enter your preferred username:  ')
+        password = input('Enter your preferred Password:  ')
+         
+         #save user name and password
+        new_user = User(username, password)
+        users.append(new_user.username)
+        
+        login()     
+                
+          #calling main function  
+        main_actions()   
+    
 if __name__ == '__main__':
     
     main()
