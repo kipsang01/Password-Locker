@@ -78,6 +78,18 @@ def main():
             new_user.see_credentials()
             
             main_actions()
+            
+           # deleting a credential
+        elif option == '3':
+            print('Select the credential you want to delete:')
+            new_user.see_credentials()
+            length = len(new_user.credentials)
+            index = int(input('Option: '))
+            while index not in range(0,length) :
+                print('invalid selection. Try again')
+            new_user.delete_credential(index)
+            
+            main_actions()
     
 if __name__ == '__main__':
     
