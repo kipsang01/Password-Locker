@@ -90,6 +90,16 @@ def main():
             new_user.delete_credential(index)
             
             main_actions()
+            
+        elif option == '4':
+            login()
+            main_actions()
+            
+        elif option == '5':
+            exit()
+        else:
+            print('invalid input')
+            main_actions()   
     
 if __name__ == '__main__':
     
