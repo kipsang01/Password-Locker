@@ -1,3 +1,4 @@
+from credentials_class import Credential
 class User:
     credentials = []
      
