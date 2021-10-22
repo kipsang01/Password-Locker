@@ -100,6 +100,11 @@ def main():
         else:
             print('invalid input')
             main_actions()   
+     
+     
+     #start of the program       
+    print('Welcome to Password Locker\n Please choose to:\n 1: Create Account\n 2: Login\n 3: Exit')
+    user_option =  input()
     
 if __name__ == '__main__':
     
