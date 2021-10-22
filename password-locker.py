@@ -43,6 +43,16 @@ def main():
     def main_actions():    
         show_options()
         option = input()
+        
+        if option == '1':
+            print('Create new credential:')
+            acc_name = input('Enter account name:  ')
+            acc_username = input('Enter account Username:  ')
+            
+            print('Choose password method:\n\
+                    1. Input your own Password\n\
+                    2. Use system generated password\n')
+            password_choice = input('')
     
 if __name__ == '__main__':
     
