@@ -1,3 +1,6 @@
+import string
+from random import *
+
 def main():
     
     users = []
@@ -28,7 +31,13 @@ def main():
             verify_username = input('Username: ')
             verify_password = input('Password: ')   
         
-    # show_options()  
+    
+    #function to generate password  
+    def generate_Password():
+        characters = string.ascii_letters + string.punctuation  + string.digits
+        password =  "".join(choice(characters) for x in range(randint(8, 16)))
+        return password  
+     
 if __name__ == '__main__':
     
     main()
