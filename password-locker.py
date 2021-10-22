@@ -9,6 +9,7 @@ def main():
     
     #function to display choices
     def show_options():
+        print('-------------------------------------------------------')
         print('Choose what you want to do:\n\
                 1. Create new Credential \n\
                 2. Display saved Credentials\n\
@@ -19,6 +20,7 @@ def main():
         
     #function login
     def login():
+        print('-------------------------------------------------------')
         print('please login now:')
         verify_username = input('Username: ')
         verify_password = input('Password: ')
@@ -29,6 +31,7 @@ def main():
             
         #verify login details
         while verify_username != new_user.username or verify_password != new_user.password:
+            print('-------------------------------------------------------')
             print("invalid credentials! Try again")
             verify_username = input('Username: ')
             verify_password = input('Password: ')   
@@ -47,6 +50,7 @@ def main():
         option = input()
         
         if option == '1':
+            print('-------------------------------------------------------')
             print('Create new credential:')
             acc_name = input('Enter account name:  ')
             acc_username = input('Enter account Username:  ')
@@ -57,6 +61,7 @@ def main():
             password_choice = input('')
             #allow password from user
             if password_choice == '1':
+                print('-------------------------------------------------------')
                 acc_password = input('Enter password:')
             #generate password  for user
             elif password_choice == '2':
@@ -81,6 +86,7 @@ def main():
             
            # deleting a credential
         elif option == '3':
+            print('-------------------------------------------------------')
             print('Select the credential you want to delete:')
             new_user.see_credentials()
             length = len(new_user.credentials)
@@ -92,8 +98,7 @@ def main():
             main_actions()
             
         elif option == '4':
-            login()
-            main_actions()
+            main()
             
         elif option == '5':
             exit()
@@ -102,13 +107,29 @@ def main():
             main_actions()   
      
      
-     #start of the program       
+     #start of the program    
+     
+    print('                       __________           ')
+    print('                     / __________ \         ')
+    print('                    | |          | |        ')
+    print('                    | |          | |        ')
+    print('                    | |__________| |        ')
+    print('                    |     ____     |        ')
+    print('                    |    (    )    |        ')
+    print('                    |     (  )     |        ')
+    print('                    |     |  |     |        ')
+    print('                    |     |__|     |        ')
+    print('                    |              |        ')
+    print('                    |______________|        ') 
+    
+    print('-------------------------------------------------------')  
     print('Welcome to Password Locker\n Please choose to:\n 1: Create Account\n 2: Login\n 3: Exit')
+    print('-------------------------------------------------------')
     user_option =  input()
     
     #create account
     if user_option == '1':
-        
+        print('-------------------------------------------------------')
         username = input('Enter your preferred username:  ')
         password = input('Enter your preferred Password:  ')
          
