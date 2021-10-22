@@ -53,6 +53,19 @@ def main():
                     1. Input your own Password\n\
                     2. Use system generated password\n')
             password_choice = input('')
+            #allow password from user
+            if password_choice == '1':
+                acc_password = input('Enter password:')
+            #generate password  for user
+            elif password_choice == '2':
+                acc_password = generate_Password()
+            else:
+                print('invalid input')
+                print('Choose password method:\n\
+                    1. Input your own Password\n\
+                    2. Use system generated password\n')
+                
+                password_choice = input(' Option: ')
     
 if __name__ == '__main__':
     
