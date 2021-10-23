@@ -7,13 +7,15 @@ class Test_password_locker(unittest.TestCase):
     
     def setUp(self):
         self.new_user = User('psang','1234') # create user
+        self.new_user.create_new_credential( 'Twitter', 'psang254', '0000')
 
     
     def test_user(self):
         self.assertEqual(self.new_user.username, 'psang')
         self.assertEqual(self.new_user.password, '1234')
         
-        
+    def test_credential_created(self):
+        self.assertEqual(len(self.new_user.credentials),1) 
         
         
 if __name__ == "__main__":
