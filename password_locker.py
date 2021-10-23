@@ -1,4 +1,4 @@
-from credentials_class import Credential
+
 from user_class import User
 import string
 from random import *
