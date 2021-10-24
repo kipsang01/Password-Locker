@@ -17,6 +17,11 @@ class Test_password_locker(unittest.TestCase):
     def test_credential_created(self):
         self.assertEqual(len(self.new_user.credentials),1) 
         
+    def test_delete_credential(self):
+        self.new_user.create_new_credential( 'Facebook', 'psang254', '22334')
+        self.new_user.delete_credential(1)
+        self.assertEqual(len(self.new_user.credentials),1)
+        
         
 if __name__ == "__main__":
     unittest.main()
